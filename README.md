@@ -3,10 +3,11 @@
 PROJECTILE MOTION:
     Using matplotlib to make graphs of the motion of a projectile. This is just to get used to coding like this.
 
-### **Physics Quick Overview** ###
+### **Quick Physics Overview** ###
 
 Horizontal Motion: As there are no forces acting in the horizontal direction, the x-component of the projectile's velocity will remain constant
 Vertical Motion: Earth's gravity accelrates the projectile downwards, which is represented with a kinematics model, 
+    
     _y_ = _h₀_ + _v₀_ sin(θ) _t_ - (1/2) _g_ _t_²
 
 
