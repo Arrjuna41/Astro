@@ -8,7 +8,7 @@ PROJECTILE MOTION:
 Horizontal Motion: As there are no forces acting in the horizontal direction, the x-component of the projectile's velocity will remain constant
 Vertical Motion: Earth's gravity accelrates the projectile downwards, which is represented with a kinematics model, 
     
-    _y_ = _h₀_ + _v₀_ sin(θ) _t_ - (1/2) _g_ _t_²
+    y = h₀ + v₀ sin(θ) t - (1/2) g t²
 
 
 ### How to Run ###
