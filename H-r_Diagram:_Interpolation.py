@@ -7,9 +7,9 @@ solar_radius = 6.957 * (10**8) # meters
 solar_kelvin = 5778 # Kelvin
 solar_lum = 3.828 * (10**26) # watts
 
-#rand_temp = Np.random.rand(2500, 50001)
-#rand_lum = Np.random.uniform(10 ** -4, 10 ** 6)
-#clrand_radius = Np.random.uniform(0.1 * solar_radius, 1000 * solar_radius)
+rand_temp = Np.random.rand(2500, 50001)
+rand_lum = Np.random.uniform(10 ** -4, 10 ** 6)
+rand_radius = Np.random.uniform(0.1 * solar_radius, 1000 * solar_radius)
 
 σ = 5.67 * 10 ** -8 # W/m^2/K^4, Approximation of Stefan - Boltzmann Constant
 
@@ -35,6 +35,17 @@ lum_list = (4 * Np.pi * radius_list**2 * σ * temp_list**4) * Np.random.normal(1
 
 
 
+log_lum_solar = Np.log10(lum_list / solar_lum)
+log_temp_solar = Np.log10(temp_list / solar_kelvin)
+
+
+
+
+
+
+
+
+
 #mat.plot(Np.log10(lum_list / solar_lum), Np.log10(temp_list / solar_kelvin), linestyle = '', color = 'r', alpha = 0.5)
 mat.figure(figsize=(8, 8))
 mat.title('H-R Diagram')
@@ -46,4 +57,6 @@ mat.scatter(Np.log10(lum_list / solar_lum), Np.log10(temp_list / solar_kelvin), 
 mat.gca().invert_xaxis()
 mat.grid(True)
 mat.colorbar(label = 'Temperature (K)')
-mat.show() 
+mat.show()
+
+
