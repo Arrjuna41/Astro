@@ -6,14 +6,12 @@ import matplotlib.pyplot as mat
 solar_radius = 6.957 * (10**8) # meters
 solar_kelvin = 5778 # Kelvin
 solar_lum = 3.828 * (10**26) # watts
+σ = 5.67 * 10 ** -8 # W/m^2/K^4, Approximation of Stefan - Boltzmann Constant
+
 
 #rand_temp = Np.random.rand(2500, 50001)
 #rand_lum = Np.random.uniform(10 ** -4, 10 ** 6)
 #clrand_radius = Np.random.uniform(0.1 * solar_radius, 1000 * solar_radius)
-
-σ = 5.67 * 10 ** -8 # W/m^2/K^4, Approximation of Stefan - Boltzmann Constant
-
-
 
 
 # Luminosity = 4πr^2 * σT^4
@@ -42,7 +40,7 @@ mat.xlabel('Temeperature (Kelvin)')
 mat.ylabel('Luminosity (W/m^2/K^4)')
 mat.xscale('log')
 mat.yscale('log')
-mat.scatter(Np.log10(lum_list / solar_lum), Np.log10(temp_list / solar_kelvin), c = temp_list, cmap='coolwarm_r')
+mat.scatter(Np.log10(temp_list / solar_kelvin),Np.log10(lum_list / solar_lum), c = temp_list, cmap='coolwarm_r')
 mat.gca().invert_xaxis()
 mat.grid(True)
 mat.colorbar(label = 'Temperature (K)')
